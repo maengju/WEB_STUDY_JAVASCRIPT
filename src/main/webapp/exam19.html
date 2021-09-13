@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type = "text/css">
+	#myid{
+		background: #ff0;
+		font-size : 1px;
+		font-weight:bold;
+		color:#00f;
+	}
+</style>
+<script type="text/javascript">
+	function doPrint(){
+		//자바 스크립트는 중복 아이디를 인식하지 못하고 가장 먼저 나타난 아이디 값만 인식
+		document.getElementById("myid").innerText = "script running"
+	}
+</script>
+</head>
+<body>
+
+	<h1 id="myid">안녕하세요</h1>
+	<h1 id="myid">자바스크립트입니다</h1>
+	<h1 id="myid">강의 참 헷갈리죠?</h1>
+	<a href="#" onclick="doPrint()">자바 스크립트 함수 호출</a>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function sum(a,b){//구현부
+		return a+b;
+	}
+	
+	
+	function showResult(){
+		result= sum(10,50);
+		red_result = "<font color='red'>"+result+"</font>";
+		document.getElementById("question").innerHTML = red_result;
+	}
+	
+	function hideResult(){
+		document.getElementById("question").innerText="?"
+	}
+</script>
+</head>
+<body>
+
+	<h1 onmouseover="showResult()" onmouseout="hideResult()">10+50=<span id="question">?</span></h1>
+		<!-- button을 클릭했을때  -->
+		<input type="button" value = "결과보기" onclick="javascript:printResult()"/>
+		<p> 결과를 보시려면 수식위에 마우스를 올리셈</p>
+
+
+
+</body>
+</html>
