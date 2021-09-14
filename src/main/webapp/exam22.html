@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function printTime(){
+		days=["일","월","화","수","목","금","토"	];
+		today = new Date();
+		
+		yy = today.getFullYear();
+		mm = today.getMonth()+1;
+		dd = today.getDate();
+		i = today.getDay();
+		day = days[i];
+		
+		hh = today.getHours();
+		mi = today.getMinutes();
+		ss = today.getSeconds();
+		
+		result = yy+"-"+mm+"-"+dd+"-"+day+"요일"+hh+":"+mi+":"+ss;
+		
+		document.getElementById("timer").innerHTML=result;
+	}
+	
+	function startTime(){
+		setInterval(printTime,1000); //단위 1-1000,1초마다 printime을 호출
+	}
+</script>
+</head>
+<body onload="startTime()">
+	<h1 id = "timer"><font color = "red">현재시간을 보여줍니다.</font></h1>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function img(){
+		if(document.img1.mokoko[0].checked){
+			document.write("<p><img src='img/으.png' width='100' height='100' alt='으'/></p>");
+		}else if(document.img1.mokoko[1].checked){
+			document.write("<p><img src='img/더줘.png' width='100' height='100' alt='더줘'/></p>");
+		}else if(document.img1.mokoko[2].checked){
+			document.write("<p><img src='img/돔황챠.png' width='100' height='100' alt='돔황챠'/></p>");
+		}
+		
+		
+	}
+
+</script>
+
+</head>
+<body >
+	<h2>라디오 버튼을 누르면 이미지가 출력됩니다.</h2>
+	<hr>
+	
+<form name="img1" onClick="img()" >
+	<label><input type="radio" name="mokoko" value="stop">으</label> 
+	<label><input type="radio" name="mokoko" value="more">더줘</label>
+	<label><input type="radio" name="mokoko" value="run">돔황챠~</label>
+	
+</form>	
+	
+</body>
+</html>

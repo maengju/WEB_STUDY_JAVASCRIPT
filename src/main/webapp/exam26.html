@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function doSubmit(){
+		/*if(document.form1.user_name.value==""){
+		alert("이름입력하세요");}*/
+		
+		if(!document.form1.user_name.value){
+			alert("이름입력하세요");
+			document.form1.user_name.focus();
+			return false;
+		}
+		
+		if(! document.form1.gender[0].checked && !document.form1.gender[1].checked){
+			alert("성별을 선택 하세요");
+			return false;
+		}
+		
+		if(document.form1.job.selectedIndex<1){
+			alert("직업을 선택 하세요");
+			document.form1.job.focus();
+			return false;
+		}
+		
+		chk=false;
+		for(i=0; i<document.form1.hobby.length; i++){
+			if(document.form1.hobby[i].checked){
+				chk=true;
+				break;//for문 벗어나기
+			}
+		}
+		if(!chk){
+			alert("취미을 선택 하세요");
+			document.form1.hobby[0].focus();
+			return false;
+		}
+		//입력확인
+		if(confirm("입력한거 맞음?")){
+			return false;
+			//document.form1.submit(); //입력한 내용 확인후 action ㅏㅌ고페이지 이동
+		}
+	}
+
+</script>
+</head>
+<body>
+<form name="form1" onsubmit="doSubmit(); " action="http://www.naver.com">
+
+	<fieldset>
+		<!-- <legend>태그는<fieldset>요소 캡션을 정의할때 사용 -->
+		<legend>회원가입</legend>
+		
+		<label>이름 <input type="text" name="user_name"/></label>
+		<br/>
+		<label>성별</label>
+		<label><input type="radio" name="gender" value="M">남자</label> <!--//radio버튼은 배열로 들어옴  -->
+		<label><input type="radio" name="gender" value="W">여자</label>
+		<br/>
+		<label>직업</label>
+		<select name="job">
+			<option>-----선택-----</option>
+			<option value="dev">프로그래머</option>	
+			<option value="pub">퍼블리셔</option>		
+		</select>
+		<br/>
+		<label>취미</label>
+		<label><input type="checkbox" value="축구" name="hobby">축구</label>
+		<label><input type="checkbox" value="농구" name="hobby">농구</label>
+		<label><input type="checkbox" value="야구" name="hobby">야구</label>
+		<br/>
+		<label>&nbsp;</label>
+		<input type="submit" name="button" value="제출" />
+		<input type="button" name="button2" value="리셋"/>
+				
+		
+	
+	</fieldset>
+
+
+</form>
+</body>
+</html>

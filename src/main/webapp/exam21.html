@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	//배열생성
+	//myArray1 = ["홍길동","자바","학생"];
+	myArray1 = new Array("홍","자바","학생");
+	
+	document.write(myArray1[0]+"<br>");
+	document.write(myArray1[1]+"<br>");
+	document.write(myArray1[2]+"<br>");
+	
+	myArray1[0]="hong";
+	myArray1[1]="Java";
+	myArray1[2]="study";
+	
+	document.write(myArray1[0]+"<br>");
+	document.write(myArray1[1]+"<br>");
+	document.write(myArray1[2]+"<br>");
+	document.write("<hr>")
+	
+	myArray2 = new Array();
+	
+	for( i = 0; i<10; i++){
+		myArray2[i] = i+1;
+	}//for
+	
+	document.write("배열 길이" + myArray2.length+"<br>");
+	
+	for( i = 0; i<myArray2.length; i++){
+		document.write(myArray2[i] +"       ");
+	}//for
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
+<!-- 
+내장 객체
+- 모든 웹 브라우저 개발사들이 공통기능의 필요성을 인지하고, 사전에 객체이름과 함수이름들을 통일하혀 구현한뒤, 브라우저안에 내장시켜놓았다.
+- 이러한 객체를 활용하는 것만으로도 많은 기능을 직접 구현하는 수고를 덜 수 있다.
+
+ -->
